@@ -1,0 +1,47 @@
+.messageblock {
+	width: 500px;
+	background: #ccc;
+	padding: 10px;
+}
+
+.messageblock .headpic {
+	width: 64px;
+	float: left;
+}
+
+.messageblock .headpic img {
+	width: 64px;
+}
+
+.messageblock .content {
+	margin-left: 74px;
+	background: #eef;
+}
+
+.messageblock .content .message {
+	font-size: 14px;
+	margin-top: 10px;
+	vertical-align: bottom;
+}
+
+.messageblock .null {
+	clear: both;
+}
+
+.messageblock a {
+	text-decoration: none;
+}
+
+.messageblock a:link {
+	color: #333;
+}
+
+.messageblock a:visited {
+	color: #333;
+}
+.messageblock a:hover {
+	color: #555;
+}
+.messageblock a:active {
+	color: #888;
+}

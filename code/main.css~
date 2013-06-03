@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+body, div, header, img, h4, input, ul, li, p, button, textarea, form {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	font-family: "Reenie Beanie", 微软雅黑, 幼圆, Georigia, Times, serif;
+}
+
+body {
+	background: #f0f0f0;
+}
+
+header {
+	background-image: url(../image/head.jpg);
+	height: 200px;
+}
+
+#container {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.content {
+}
+
+footer {
+	background-color: #89C8E4;
+}
+
+.menu {
+	display: block;
+	background: #7bbfea;
+}
+
+.menu li {
+	display: block;
+	float:left;
+	padding: 14px;
+}
+
+.menu li a {
+	text-decoration: none; color: #FFF;
+}
+
+.menu li:hover {
+	display: block;
+	background: #ccf;
+}

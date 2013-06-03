@@ -1,0 +1,11 @@
+<div class="messageblock">
+	<div class="headpic">
+		<img src="../image/headpic2.png" alt="headpic" />
+	</div>	
+	<div class="content">
+	<p class="user_name"><a href="people.php?user=<?= $publish_user_id ?>"><?=$nick_name ?></a></p>
+	<p class="message"><?=$note_content?></p>
+	</div>
+	<div class="null">
+	</div>
+</div>
