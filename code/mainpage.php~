@@ -46,7 +46,7 @@ if (!($result = mysql_query($sql))) {
 	while ($row = mysql_fetch_array($result)) {
 		$nick_name = $row['nick_name'];
 		$note_content = $row['content'];
-		//$publish_user_id = $row['user_id'];
+		$publish_user_id = $row['user_id'];
 		echo "<div class=\"block\" >";
 			include 'message.php';
 		echo "</div>";

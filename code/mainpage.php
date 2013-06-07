@@ -39,7 +39,7 @@ require_once('db_conn.php');
 </div>
 <?php 
 $user_id = $_SESSION['user_id'];
-$sql = "SELECT user_info.user_id, nick_name, content FROM note, user_info where user_info.user_id = '$user_id' and user_info.user_id = note.user_id order by publish_time desc";
+$sql = "SELECT user_info.user_id, nick_name, content FROM note, user_info, user_relation where (user_info.user_id = '$user_id' and user_info.user_id = note.user_id) or (user_relation.user_id_1 = '$user_id' and user_info.user_id = user_relation.user_id_2 and note.user_id = user_relation.user_id_2) order by publish_time desc";
 if (!($result = mysql_query($sql))) {
 	echo mysql_error();
 } else {

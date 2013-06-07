@@ -1,0 +1,49 @@
+.user_info_block {
+	padding: 10px;
+	background-color: #88dbe9;
+}
+
+.user_info_pic img {
+	height: 120px;
+}
+
+.user_info_pic {
+	float: left;
+}
+
+.user_info_nickname_block {
+	margin-left: 150px;
+	margin-top: 20px;
+}
+
+.user_info_nickname_block .addfriend {
+	margin-top: 20px;
+}
+
+.user_info_nickname_block .user_nickname {
+	font-width: bold;
+	font-size: 20px;
+}
+
+.user_info_block .null {
+	clear: both;
+}
+
+.user_info_block a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.user_info_block a:link {
+	color: #333;
+}
+
+.user_info_block a:visited {
+	color: #333;
+}
+.user_info_block a:hover {
+	color: #555;
+}
+.user_info_block a:active {
+	color: #888;
+}
