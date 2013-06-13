@@ -13,7 +13,6 @@ $name = $_REQUEST['user_name'];
 $nick_name = $_REQUEST['nick_name'];
 $password = $_REQUEST['password'];
 
-echo $name."<br />".$nick_name."<br />".$password."<br />";
 
 $sql = "select user_name from user_info where user_name = '$name'";
 if (!($result = mysql_query($sql))) {
@@ -31,7 +30,12 @@ if (!mysql_query($sql)) {
 	mysql_close($db);
 	die('Error: '. mysql_error());
 }
-echo "success";
+
+?>
+<script>
+window.location.href="index.php";
+</script>
+<?php
 mysql_close($db);
 
 ?>

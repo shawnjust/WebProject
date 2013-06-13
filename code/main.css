@@ -7,6 +7,10 @@ body, div, header, img, h4, input, ul, li, p, button, textarea, form {
 	font-family: "Reenie Beanie", 微软雅黑, 幼圆, Georigia, Times, serif;
 }
 
+.null {
+	clear: both;
+}
+
 body {
 	background: #f0f0f0;
 }
@@ -16,12 +20,16 @@ header {
 	height: 200px;
 }
 
+
 #container {
+	font-size: 30px;
 	width: 980px;
 	margin: 0 auto;
 }
 
 .content {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 footer {
@@ -31,12 +39,13 @@ footer {
 .menu {
 	display: block;
 	background: #7bbfea;
+	font-size: 25px;
 }
 
 .menu li {
 	display: block;
 	float:left;
-	padding: 14px;
+	padding: 14px 20px;
 }
 
 .menu li a {
@@ -51,4 +60,26 @@ footer {
 .block {
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+#searchform {
+	margin-top: 50px;
+	margin-right: 50px;
+	float: right;
+}
+
+#searchform #searchinput {
+	border: 5px solid #89C8E4;
+	border-radius: 15px;
+	font-size: 25px;
+	width: 200px;
+	padding: 5px;
+}
+
+#searchform #searchbutton {
+	border: 5px solid #89C8E4;
+	border-radius: 15px;
+	font-size: 25px;
+	width: 100px;
+	padding: 5px 20px;
 }

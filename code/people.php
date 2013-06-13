@@ -18,16 +18,7 @@ require_once('db_conn.php');
 </head>
 <body>
 <div id="container">
-<header>
-<div>
-<ul class="menu">
-<li><a href="#">首页</a></li>
-<li><a href="#">个人主页</a></li>
-<li><a href="#">好友列表</a></li>
-<li><a href="#">个人设置</a></li>
-</ul>
-</div>
-</header>
+<?php include 'head.php'; ?>
 <div class="content">
 <?php 
 $user_id = $_GET['user'];
@@ -55,6 +46,9 @@ if (!($result = mysql_query($sql))) {
 				}
 			}	
 		}
+		$_nick_name = $nick_name;
+		$_user_id = $user_id;
+		$_friend = $friend;
 		echo "<div class=\"block\" >";
 		include 'user_info.php';
 		echo "</div>";
@@ -62,7 +56,7 @@ if (!($result = mysql_query($sql))) {
 }
 
 
-$sql = "SELECT user_info.user_id, nick_name, content FROM note, user_info where user_info.user_id = '$user_id' and user_info.user_id = note.user_id order by publish_time desc";
+$sql = "SELECT user_info.user_id, nick_name, content, publish_time FROM note, user_info where user_info.user_id = '$user_id' and user_info.user_id = note.user_id order by publish_time desc";
 if (!($result = mysql_query($sql))) {
 	echo mysql_error();
 } else {
@@ -70,6 +64,7 @@ if (!($result = mysql_query($sql))) {
 		$nick_name = $row['nick_name'];
 		$note_content = $row['content'];
 		$publish_user_id = $row['user_id'];
+		$publish_time = $row['publish_time'];
 		echo "<div class=\"block\" >";
 		include 'message.php';
 		echo "</div>";

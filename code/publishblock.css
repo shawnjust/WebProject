@@ -1,6 +1,5 @@
 #publishblock {
 	border: 1px solid #3a9ddf;
-	width: 602px;
 	padding: 10px;
 }
 
@@ -9,7 +8,7 @@
 
 #publishblock #note_content {
 	padding: 5px;
-	width: 590px;
+	width: 800px;
 	font-size: 20px;
 	border: 1px solid #3a9ddf;
 	height: 100px;
@@ -17,10 +16,11 @@
 }
 
 #publishblock #submitbutton {
-	font-size: 25px;
-	padding: 5px 15px;
-	border: 1px solid blue;
+	font-size: 30px;
+	padding: 5px 30px;
+	border: 5px solid #3a9ddf;
 	float: right;
+	border-radius: 10px;
 }
 
 #publishblock .null {

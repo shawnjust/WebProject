@@ -1,25 +1,29 @@
 .messageblock {
-	width: 500px;
 	background: #ccc;
 	padding: 10px;
 }
 
 .messageblock .headpic {
-	width: 64px;
+	width: 128px;
 	float: left;
 }
 
 .messageblock .headpic img {
-	width: 64px;
+	width: 128px;
 }
 
 .messageblock .content {
-	margin-left: 74px;
-	background: #eef;
+	margin-top: 15px;
+	margin-left: 150px;
+	margin-right: 20px;
+}
+
+.messageblock .content .publishtime {
+	float: right;
 }
 
 .messageblock .content .message {
-	font-size: 14px;
+	font-size: 30px;
 	margin-top: 10px;
 	vertical-align: bottom;
 }
@@ -29,6 +33,7 @@
 }
 
 .messageblock a {
+	font-size: 30px;
 	text-decoration: none;
 	font-weight: bold;
 }
