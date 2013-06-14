@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html>
 	<head>
@@ -7,6 +10,15 @@
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="index.js"></script>
 		<title>Weibo登陆</title>
+<?php
+if (isset($_SESSION['user_id'])) {
+	?>
+	<script>
+	window.location.href="mainpage.php";
+	</script>
+<?php
+}
+?>
 	</head>
 	<body>
 	<div id="container">

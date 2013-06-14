@@ -5,6 +5,7 @@
 <li><a href="people.php?user=<?= $user_id?>">个人主页</a></li>
 <li><a href="friendlist.php">好友列表</a></li>
 <li><a href="set.php">个人设置</a></li>
+<li><a href="logout.php">退出</a></li>
 </ul>
 <div class="null">
 </div>
