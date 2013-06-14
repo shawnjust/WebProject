@@ -14,9 +14,9 @@
 <h3>用户名或密码错误 请重新登录</h3>
 <p><a href="index.php">点击这里返回登陆窗口</a></p>
 </div>
-<footer>
-copyright
-</footer>
+<?php 
+include 'foot.php';
+?>
 </div>
 </body>
 </html>

@@ -12,12 +12,14 @@ body, div, header, img, h4, input, ul, li, p, button, textarea, form {
 }
 
 body {
-	background: #f0f0f0;
+	background: #fbff7d;
 }
 
 header {
-	background-image: url(../image/head.jpg);
+	background-image: url(../image/main_bg.gif);
 	height: 200px;
+	box-shadow: 1px 1px 20px #888;
+	border-radius: 10px;
 }
 
 
@@ -30,38 +32,43 @@ header {
 .content {
 	margin-top: 10px;
 	margin-bottom: 10px;
+	border-radius: 10px;
 }
 
 footer {
 	background-color: #89C8E4;
+	box-shadow: 1px 1px 20px #888;
+	border-radius: 10px;
 }
 
 .menu {
 	display: block;
-	background: #7bbfea;
 	font-size: 25px;
 }
 
 .menu li {
 	display: block;
 	float:left;
-	padding: 14px 20px;
+	padding: 15px 20px;
 }
 
 .menu li a {
-	text-decoration: none; color: #FFF;
+	text-decoration: none; 
+	color: #FFF;
 }
 
 .menu li:hover {
 	display: block;
-	background: #ccf;
+	background: #65a6d1;
 }
 
 .block {
 	margin-top: 10px;
 	margin-bottom: 10px;
+	box-shadow: 1px 1px 20px #888;
+	border-radius: 10px;
+	background-color: #defadc
 }
-
 #searchform {
 	margin-top: 50px;
 	margin-right: 50px;
@@ -69,17 +76,39 @@ footer {
 }
 
 #searchform #searchinput {
-	border: 5px solid #89C8E4;
+	border: 5px solid #ffa840;
 	border-radius: 15px;
 	font-size: 25px;
 	width: 200px;
 	padding: 5px;
 }
 
+#searchform #searchinput:focus {
+	box-shadow: 1px 1px 20px #888;
+	outline: none;
+}
+
+
 #searchform #searchbutton {
-	border: 5px solid #89C8E4;
+	border: 5px solid #ffa840;
 	border-radius: 15px;
 	font-size: 25px;
 	width: 100px;
 	padding: 5px 20px;
+}
+
+
+#searchform #searchbutton:hover {
+	box-shadow: 1px 1px 20px #888;
+}
+
+
+#searchform #searchbutton:active {
+	box-shadow: none;
+}
+
+footer {
+	text-align: center;
+	font-size: 25px;
+	padding: 10px;
 }

@@ -1,6 +1,7 @@
 .user_info_block {
 	padding: 10px;
-	background-color: #88dbe9;
+	background-color: #87c9ae;
+	border-radius: 10px;
 }
 
 .user_info_pic img {

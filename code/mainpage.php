@@ -5,6 +5,11 @@ session_start();
 //	die();
 //}
 require_once('db_conn.php');
+if (!isset($_SESSION['user_id'])) {
+	?><script type="text/javascript">window.location.href="index.php"</script><?php
+	die();
+}
+$user_id = $_SESSION['user_id'];
 ?>
 <!doctype html>
 <html>
@@ -42,15 +47,15 @@ if (!($result = mysql_query($sql))) {
 		$publish_user_id = $row['user_id'];
 		$publish_time = $row['publish_time'];
 		echo "<div class=\"block\" >";
-			include 'message.php';
+		include 'message.php';
 		echo "</div>";
 	}
 }
 ?>
 </div>
-<footer>
-copyright
-</footer>
+<?php 
+include 'foot.php';
+?>
 </div>
 </body>
 </html>

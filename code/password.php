@@ -72,9 +72,9 @@ if (!($result = mysql_query($sql))) {
 	<div class="null">
 	</div>
 </div>
-<footer>
-copyright
-</footer>
+<?php 
+include 'foot.php';
+?>
 </div>
 </body>
 </html>

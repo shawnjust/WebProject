@@ -14,6 +14,7 @@
 		</header>
 
 		<div class="content">
+		<div class="block">
 			<div id="registerContent">
 				<form method="get" id="registerForm" action="loginprocess.php">
 					<ul>
@@ -37,9 +38,10 @@
 				</form>
 			</div>
 		</div>
-		<footer>
-		copyright
-		</footer>
+		</div>
+<?php 
+include 'foot.php';
+?>
 	</div>
 	</body>
 

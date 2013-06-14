@@ -5,6 +5,7 @@
 }
 
 h4 {
+	color: #117799;
 	width: 200px;
 	text-align: right;
 	float: left;
@@ -19,29 +20,42 @@ input {
 	font-size: 28px;
 	margin-right:10px;
 	padding: 5px;
-	border: 1px solid #9ECFFE;
+	border: 5px solid #9ECFFE;
+	border-radius: 10px;
 }
 
 .inputbucket {
 	width: 200px;
 }
 
+.inputbucket:focus {
+	box-shadow: 1px 1px 20px #888;
+	outline: none;
+}
+
 .button {
-	width: 212px;
-	font-size: 28px;
+	width: 200px;
+	font-size: 35px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
 
 #registerbutton {
-	background-color: #ffad40;
-	border-radius: 15px;
+	border: 5px solid #ffad40;
+	border-radius: 10px;
 }
 
 #loginbutton {
-	background-color: #45ba16;
-	border-radius: 15px;
-	border-width: 0px;
+	border: 5px solid #45ba16;
+	border-radius: 10px;
+}
+
+.button:hover {
+	box-shadow: 1px 1px 20px #888;
+}
+
+.button:active {
+	box-shadow: none;
 }
 
 #registerContent .buttonli {

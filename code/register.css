@@ -5,6 +5,7 @@
 }
 
 h4 {
+	color: #117799;
 	width: 200px;
 	text-align: right;
 	float: left;
@@ -19,17 +20,31 @@ input {
 	font-size: 28px;
 	margin-right:10px;
 	padding: 5px;
-	border: 1px solid #9ECFFE;
+	border: 5px solid #9ecffe;
+	border-radius: 10px;
 }
 
 .inputbucket {
 	width: 200px;
 }
 
+.inputbucket:focus {
+	box-shadow: 1px 1px 20px #888;
+	outline: none;
+}
+
 #submitbutton {
-	font-size: 28px;
+	font-size: 35;
 	margin-left: 200px;
-	width: 212px;
+	width: 220px;
+}
+
+#submitbutton:hover {
+	box-shadow: 1px 1px 20px #888;
+}
+
+#submitbutton:active {
+	box-shadow: none;
 }
 
 footer {

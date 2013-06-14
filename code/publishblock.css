@@ -1,5 +1,4 @@
 #publishblock {
-	border: 1px solid #3a9ddf;
 	padding: 10px;
 }
 
@@ -10,9 +9,16 @@
 	padding: 5px;
 	width: 800px;
 	font-size: 20px;
-	border: 1px solid #3a9ddf;
+	border: 5px solid #3a9ddf;
 	height: 100px;
 	display: inline-block;
+	border-radius: 10px;
+	
+}
+
+#publishblock #note_content:focus {
+	outline: none;
+	box-shadow: 1px 1px 20px #888;
 }
 
 #publishblock #submitbutton {
@@ -21,6 +27,15 @@
 	border: 5px solid #3a9ddf;
 	float: right;
 	border-radius: 10px;
+	
+}
+
+#publishblock #submitbutton:hover {
+	box-shadow: 1px 1px 20px #888;
+}
+
+#publishblock #submitbutton:active {
+	box-shadow: none;
 }
 
 #publishblock .null {

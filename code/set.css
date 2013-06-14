@@ -1,8 +1,10 @@
 div #settingnavigation {
-	background-color: #b5ccff;
+	background-color: #53a3b8;
 	float: left;
 	width: 200px;
 	height: 400px;
+	box-shadow: 1px 1px 20px #888;
+	border-radius: 10px;
 }
 
 div #settingnavigation .dir {
@@ -13,22 +15,36 @@ div #settingnavigation .dir {
 	margin-bottom: 20px;
 }
 
+.tab a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.tab a:hover {
+	background: #87c9ae;
+}
+
 div #settingnavigation .tab {
 	margin-top: 100px;
 }
 
 div #modify {
+	background: #defadc;
 	height: 400px;
 	margin-left: 210px;
-	border: 1px solid #ddd;
+	box-shadow: 1px 1px 20px #888;
+	border-radius: 10px;
+	position: relative;
 }
 
 #nicknameform {
-	margin-top: 130px;
+	margin-top: 100px;
+	position: absolute;
 }
 
 #nicknameform h4 {
 	width: 200px;
+	color: #117799;
 	text-align: right;
 	float: left;
 	margin-left: 100px;
@@ -43,15 +59,29 @@ div #modify {
 	font-size: 28px;
 	margin-right: 10px;
 	padding: 5px;
-	border: 1px solid #9ecffe;
+	border: 5px solid #ffa840;
+	border-radius: 10px;
 }
 
 #nicknameform .inputbucket {
 	width: 200px;
 }
 
+#nicknameform .inputbucket:focus {
+	outline: none;
+	box-shadow: 1px 1px 20px #888;
+}
+
 #nicknameform #modifybutton {
 	font-size: 28px;
 	margin-left: 300px;
-	width: 212px;
+	width: 220px;
+}
+
+#nicknameform #modifybutton:hover {
+	box-shadow: 1px 1px 20px #888;
+}
+
+#nicknameform #modifybutton:active {
+	box-shadow: none;
 }

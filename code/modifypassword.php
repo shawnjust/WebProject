@@ -1,6 +1,35 @@
 <?php
 session_start();
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset=utf8 />
+<link type="text/css" rel="stylesheet" href="main.css" />
+<link type="text/css" rel="stylesheet" href="processmessage.css" />
+<title>密码更改信息</title>
+</head>
+<body>
+<div id="container">
+<?php
 require_once('db_conn.php');
+
+if (!isset($_SESSION['user_id'])) {
+?>
+	<script type="text/javascript">
+	window.location.href="index.php";
+	</script>
+<?php
+	die();
+}
+
+if ((!isset($_REQUEST['oldpassword'])) || (!isset($_REQUEST['newpassword']))) {
+?>
+<script type="text/javascript">
+window.location.href="mainpage.php";
+</script>
+<?php
+}
 
 $user_id = $_SESSION['user_id'];
 $oldpassword = $_REQUEST['oldpassword'];
@@ -28,37 +57,41 @@ if (!($result = mysql_query($sql))) {
 		$oldpasswordsuccess = false;
 	}
 }
-
-
-
 ?>
-<!doctype html> 
-<html>
-<head>
-<meta charset=utf8 />
-<title>密码更改信息</title>
-</head>
-<body>
+
+<?php
+include 'head.php';
+?>
+ 
+<div class="block">
+
 <?php
 if ($oldpasswordsuccess) {
 	if ($success) {
 ?>
-<h3>密码更改成功</h3>
-<p><a href="password.php">点击这里返回修改界面</a></p>
+<p id="messagecontent">密码更改成功</p>
+<a id="link" href="password.php">点击这里返回修改界面</a>
 <?php
 	} else {
 		?>
-<h3>操作异常，请重试</h3>
-<p><a href="password.php">点击这里返回重试</a></p>
+<p id="messagecontent">操作异常，请重试</p>
+<a id="link" href="password.php">点击这里返回重试</a>
 
 <?php
 	}
 } else {
 ?>
-<h3>密码错误，请重试</h3>
-<p><a href="password.php">点击这里返回重试</a></p>
+<p id="messagecontent">密码错误，请重试</p>
+<a id="link" href="password.php">点击这里返回重试</a>
 <?php 
 }?>
+</div>
+
+<?php
+include 'foot.php';
+?>
+
+</div>
 </body>
 </html>
 

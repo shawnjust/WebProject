@@ -1,5 +1,4 @@
 .messageblock {
-	background: #ccc;
 	padding: 10px;
 }
 
@@ -39,15 +38,15 @@
 }
 
 .messageblock a:link {
-	color: #333;
+	color: #03426a;
 }
 
 .messageblock a:visited {
-	color: #333;
+	color: #03426a;
 }
 .messageblock a:hover {
-	color: #555;
+	color: #ff8e00;
 }
 .messageblock a:active {
-	color: #888;
+	color: #ffaa40;
 }

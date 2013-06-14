@@ -1,7 +1,35 @@
 <?php
 session_start();
-require_once('db_conn.php');
+?>
+<!doctype html> 
+<html>
+<head>
+<meta charset=utf8 />
+<link type="text/css" rel="stylesheet" href="main.css" />
+<link type="text/css" rel="stylesheet" href="processmessage.css" />
+<title>昵称更改信息</title>
+</head>
+<body>
+<div id="container">
 
+<?php
+require_once('db_conn.php');
+if (!isset($_SESSION['user_id'])) {
+?>
+	<script type="text/javascript">
+	window.location.href="index.php";
+	</script>
+<?php
+	die();
+}
+if (!isset($_REQUEST['nick_name'])) {
+?>
+	<script type="text/javascript">
+	window.location.href="mainpage.php";
+	</script>
+<?php
+	die();
+}
 $user_id = $_SESSION['user_id'];
 $nick_name = $_REQUEST['nick_name'];
 
@@ -15,24 +43,31 @@ if (!(mysql_query($sql))) {
 }
 
 ?>
-<!doctype html> 
-<html>
-<head>
-<meta charset=utf8 />
-<title>昵称更改信息</title>
-</head>
-<body>
+
+<?php 
+include 'head.php';
+?>
+
+<div class="block">
+
 <?php
 if ($success) {
 ?>
-<h3>昵称更改成功</h3>
-<p><a href="set.php">点击这里返回修改界面</a></p>
+<p id="messagecontent">昵称更改成功</p>
+<a id="link" href="set.php">点击这里返回修改界面</a>
 <?php
 } else {
 ?>
-<h3>操作异常，请重试</h3>
-<p><a href="set.php">点击这里返回登陆窗口</a></p>
+<p id="messagecontent">操作异常，请重试</p>
+<a id="link" href="set.php">点击这里返回登陆窗口</a>
 <?php 
 }?>
+
+</div>
+
+<?php 
+include 'foot.php';
+?>
+</div>
 </body>
 </html>

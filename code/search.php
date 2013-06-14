@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION['user_id'])) {
+	?><script type="text/javascript">window.location.href="index.php"</script><?php
+	die();
+}
+$user_id = $_SESSION['user_id'];
 require_once('db_conn.php');
 ?>
 <!doctype html>
@@ -52,9 +57,9 @@ if (!($result = mysql_query($sql))) {
 }
 ?>
 </div>
-<footer>
-copyright
-</footer>
+<?php 
+include 'foot.php';
+?>
 </div>
 </body>
 </html>
