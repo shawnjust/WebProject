@@ -28,7 +28,7 @@ if (isset($_SESSION['user_id'])) {
 		<div class="content">
 		<div class="block">
 			<div id="registerContent">
-				<form method="get" id="registerForm" action="loginprocess.php">
+				<form method="post" id="registerForm" action="loginprocess.php">
 					<ul>
 						<li>
 						<div class="submitelement">

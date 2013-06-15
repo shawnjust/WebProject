@@ -42,7 +42,7 @@ if (!($result = mysql_query($sql))) {
 	</div>
 	<div id="modify">
 		<div id="modifycontent">
-		<form method="get" id="passwordform" action="modifypassword.php">
+		<form method="post" id="passwordform" action="modifypassword.php">
 			<ul>
 				<li>
 				<div class="submitelement">

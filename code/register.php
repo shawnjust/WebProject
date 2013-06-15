@@ -16,7 +16,7 @@
 		<div class="content">
 		<div class="block">
 			<div id="registerContent">
-				<form method="get" id="registerForm" action="regist.php">
+				<form method="post" id="registerForm" action="regist.php">
 					<ul>
 						<li>
 						<div class="submitelement">

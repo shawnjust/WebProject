@@ -28,7 +28,7 @@ $user_id = $_SESSION['user_id'];
 <div class="content">
 <div class="block">
 	<div id="publishblock">
-		<form method="get" id="note_block" action="publish.php">
+		<form method="post" id="note_block" action="publish.php">
 			<div><textarea id="note_content" name="note_content"></textarea></div>
 			<div><input id="submitbutton" type="submit" value="发布"/></div>
 			<div class="null"></div>

@@ -11,26 +11,21 @@ $(document).ready(function() {
 		var password = $("#inputpassword").val();
 		
 		if (!username) {
-			alert("请输入用户名");
 			$("#inputusername").focus();
 			return false;
 		}
 
 		if (!usernameExp.test(username)) {
+			$("#inputusername").focus();
 			alert("用户名必须为5到30个字符，包括大小字母、数字以及下划线");
 			return false;
 		}
 
 		if (!password) {
-			alert("请输入密码");
 			$("#inputpassword").focus();
 			return false;
 		}
 
-		if (!passwordExp.test(password)) {
-			alert("密码不和规范 请重新输入");
-			return false;
-		}
 		return true;
 	});
 });

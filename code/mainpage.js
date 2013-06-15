@@ -5,7 +5,6 @@ $(document).ready(function() {
 		var keyword = $("#searchinput").val();
 
 		if (!keyword) {
-			alert("请输入关键字");
 			$("#searchinput").focus();
 			return false;
 		}
@@ -23,7 +22,7 @@ $(document).ready(function() {
 			return false;
 		}
 
-		$("note_content").val(HTMLChange(content));
+		$("#note_content").val(HTMLChange(content));
 
 		return true;
 
@@ -49,16 +48,23 @@ $(document).ready(function() {
 
 function HTMLChange(source){
 	
-	var changeStr="";
+	var changeStr=source;
 	
-	changeStr=source.replace("&","&amp;");
-	changeStr=changeStr.replace(" ","&nbsp;");
-	changeStr=changeStr.replace("<","&lt;");
-	changeStr=changeStr.replace(">","&gt;");	
-	changeStr=changeStr.replace("\r\n","<br>");
-	changeStr=changeStr.replace("\"", "&quot;");	
-	changeStr=changeStr.replace("\'", "&#39;");	
-	
+	while (changeStr.search(/&/) != -1)
+		changeStr=changeStr.replace('&','&amp;');
+	while (changeStr.search(/ /) != -1)
+		changeStr=changeStr.replace(' ','&nbsp;');
+	while (changeStr.search(/</) != -1)
+		changeStr=changeStr.replace('<','&lt;');
+	while (changeStr.search(/>/) != -1)
+		changeStr=changeStr.replace('>','&gt;');	
+	while (changeStr.search(/\n/) != -1)
+		changeStr=changeStr.replace('\n','<br>');
+	while (changeStr.search(/\"/) != -1)
+		changeStr=changeStr.replace('\"', '&quot;');	
+	while (changeStr.search(/\'/) != -1)
+		changeStr=changeStr.replace('\'', '&#39;');	
+
 	return changeStr;
 }
 

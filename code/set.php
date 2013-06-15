@@ -47,7 +47,7 @@ if (!($result = mysql_query($sql))) {
 	</div>
 	<div id="modify">
 		<div id="modifycontent">
-		<form method="get" id="nicknameform" action="modifynickname.php">
+		<form method="post" id="nicknameform" action="modifynickname.php">
 			<ul>
 				<li>
 				<div class="submitelement">

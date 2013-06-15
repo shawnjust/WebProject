@@ -8,7 +8,6 @@ $(document).ready(function() {
 		var repeat = $("#inputrepeat").val();
 
 		if (!username) {
-			alert("请输入用户名");
 			$("#inputusername").focus();
 			return false;
 		}
@@ -20,13 +19,11 @@ $(document).ready(function() {
 		}
 
 		if (!nickname) {
-			alert("请输入昵称");
 			$("#inputnickname").focus();
 			return false;
 		}
 
 		if (!password) {
-			alert("请输入密码");
 			$("#inputpassword").focus();
 			return false;
 		}
