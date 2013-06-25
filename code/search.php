@@ -34,6 +34,7 @@ if (!($result = mysql_query($sql))) {
 		$_nick_name = $row['nick_name'];
 		$_user_id = $row['user_id'];
 		$_friend = true;
+		$_peo_head_pic = $row['pic_path'];
 		echo "<div class=\"block\" >";
 		include 'user_info.php';
 		echo "</div>";
@@ -41,7 +42,7 @@ if (!($result = mysql_query($sql))) {
 }
 
 
-$sql = "SELECT distinct user_info.user_id, nick_name, content, publish_time FROM note, user_info where user_info.user_id = note.user_id and note.content like '%$keyword%' order by publish_time desc";
+$sql = "SELECT distinct user_info.user_id, nick_name, content, publish_time, pic_path FROM note, user_info where user_info.user_id = note.user_id and note.content like '%$keyword%' order by publish_time desc";
 if (!($result = mysql_query($sql))) {
 	echo mysql_error();
 } else {
@@ -50,6 +51,7 @@ if (!($result = mysql_query($sql))) {
 		$note_content = $row['content'];
 		$publish_user_id = $row['user_id'];
 		$publish_time = $row['publish_time'];
+		$user_head_pic = $row['pic_path'];
 		echo "<div class=\"block\" >";
 		include 'message.php';
 		echo "</div>";

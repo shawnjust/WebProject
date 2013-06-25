@@ -36,6 +36,7 @@ if (!($result = mysql_query($sql))) {
 	if ($row = mysql_fetch_array($result)) {
 		$nick_name = $row['nick_name'];
 		$friend = false;
+		$_peo_head_pic = $row['pic_path'];
 		if (!isset($_SESSION['user_id'])) {
 			$friend = true; 
 		} else {
@@ -61,7 +62,7 @@ if (!($result = mysql_query($sql))) {
 }
 
 
-$sql = "SELECT user_info.user_id, nick_name, content, publish_time FROM note, user_info where user_info.user_id = '$user_id' and user_info.user_id = note.user_id order by publish_time desc";
+$sql = "SELECT user_info.user_id, nick_name, content, publish_time, pic_path FROM note, user_info where user_info.user_id = '$user_id' and user_info.user_id = note.user_id order by publish_time desc";
 if (!($result = mysql_query($sql))) {
 	echo mysql_error();
 } else {
@@ -70,6 +71,7 @@ if (!($result = mysql_query($sql))) {
 		$note_content = $row['content'];
 		$publish_user_id = $row['user_id'];
 		$publish_time = $row['publish_time'];
+		$user_head_pic = $row['pic_path'];
 		echo "<div class=\"block\" >";
 		include 'message.php';
 		echo "</div>";

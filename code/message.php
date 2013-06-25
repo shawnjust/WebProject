@@ -1,6 +1,6 @@
 <div class="messageblock">
 	<div class="headpic">
-		<img src="../image/headpic2.png" alt="headpic" />
+	<img src="<?= $user_head_pic?>" alt="headpic" />
 	</div>	
 	<div class="content">
 	<p class="user_name"><a href="people.php?user=<?= $publish_user_id ?>"><?=$nick_name ?></a></p>

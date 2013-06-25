@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION['user_id'])) {
+	?><script type="text/javascript">window.location.href="index.php"</script><?php
+	die();
+}
+$user_id = $_SESSION['user_id'];
 //if (!isset($_SESSION['user_id'])) {
 //	require 'index.php';
 //	die();
@@ -24,10 +29,10 @@ if (!($result = mysql_query($sql))) {
 <head>
 <meta charset=utf-8 />
 <link type="text/css" rel="stylesheet" href="main.css" />
-<link type="text/css" rel="stylesheet" href="password.css" />
+<link type="text/css" rel="stylesheet" href="set.css" />
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="mainpage.js"></script>
-<script type="text/javascript" src="password.js"></script>
+<script type="text/javascript" src="editheadpic.js"></script>
 <title>Weibo</title>
 </head>
 <body>
@@ -43,24 +48,12 @@ if (!($result = mysql_query($sql))) {
 	</div>
 	<div id="modify">
 		<div id="modifycontent">
-		<form method="post" id="passwordform" action="modifypassword.php">
+		<form enctype="multipart/form-data" method="post" id="nicknameform" action="upheadpic.php" >
 			<ul>
 				<li>
 				<div class="submitelement">
-					<h4>旧密码：</h4>
-					<span><input class="inputbucket" id="inputoldpassword" type="password" name="oldpassword" /></span>
-				</div>
-				</li>
-				<li>
-				<div class="submitelement">
-					<h4>新密码：</h4>
-					<span><input class="inputbucket" id="inputnewpassword" type="password" name="newpassword" /></span>
-				</div>
-				</li>
-				<li>
-				<div class="submitelement">
-					<h4>重复密码：</h4>
-					<span><input class="inputbucket" id="inputrepeat" type="password" name="repeat" /></span>
+					<h4>上传头像：</h4>
+					<span><input class="inputbucket" id="filepathinput" type="file" name="headpic" /></span>
 				</div>
 				</li>
 				<li>

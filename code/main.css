@@ -49,15 +49,17 @@ footer {
 .menu li {
 	display: block;
 	float:left;
-	padding: 15px 20px;
 }
 
 .menu li a {
+	border-radius: 10px;
+	display: block;
 	text-decoration: none; 
 	color: #FFF;
+	padding: 15px 20px;
 }
 
-.menu li:hover {
+.menu a:hover {
 	display: block;
 	background: #65a6d1;
 }

@@ -38,6 +38,7 @@ if (!($result = mysql_query($sql))) {
 		$_user_id = $row['user_id_2'];
 		$_nick_name = $row['nick_name'];
 		$_friend = true;
+		$_peo_head_pic = $row['pic_path'];
 		echo "<div class=\"block\" >";
 		include 'user_info.php';
 		echo "</div>";

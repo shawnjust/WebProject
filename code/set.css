@@ -67,6 +67,10 @@ div #modify {
 	width: 200px;
 }
 
+#nicknameform #filepathinput {
+	width: 300px;
+}
+
 #nicknameform .inputbucket:focus {
 	outline: none;
 	box-shadow: 1px 1px 20px #888;

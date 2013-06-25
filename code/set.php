@@ -43,6 +43,7 @@ if (!($result = mysql_query($sql))) {
 		<div class="tab">
 			<a class="dir" href="set.php">基本信息</a>
 			<a class="dir" href="password.php">修改密码</a>
+			<a class="dir" href="editheadpic.php">修改头像</a>
 		</div>
 	</div>
 	<div id="modify">
